@@ -83,8 +83,6 @@
 
     setTimeout(checkForMatch, 800)
   }
-
-  $: console.log(clicks)
 </script>
 
 {#if !isWaiting}

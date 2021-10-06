@@ -30,12 +30,13 @@
 </main>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
   h1,
   h2 {
     margin-bottom: 1rem;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ff2d55;
+    font-family: 'Poppins', sans-serif;
+    color: white;
   }
   main {
     display: flex;
@@ -49,8 +50,8 @@
   }
   section {
     display: grid;
-    grid-template-columns: repeat(4, 10vw);
-    grid-template-rows: repeat(4, 10vw);
+    grid-template-columns: repeat(4, 8vw);
+    grid-template-rows: repeat(4, 8vw);
     gap: 2rem;
     perspective: 800px;
     -webkit-perspective: 800px;
