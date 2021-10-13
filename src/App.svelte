@@ -7,24 +7,53 @@
   let cards = []
   let clicks = 0
 
-  const randomize = () => {
+  const randomizeCards = () => {
     cards = [...rawData, ...rawData]
     shuffledCards = cards.sort(() => Math.random() - 0.5)
   }
 
-  if (localStorage.getItem('hmf-bestScore')) {
-    $bestScore = localStorage.getItem('hmf-bestScore')
+  if (localStorage.getItem('bestScore')) {
+    $bestScore = localStorage.getItem('bestScore')
   }
 </script>
 
-<svelte:body use:randomize />
+<svelte:head>
+  <title>Memory Game - Highlands Motoring Festival</title>
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="Memory Game - Highlands Motoring Festival"
+  />
+  <meta
+    property="og:description"
+    content="Play the Highlands Motoring Festival Memory Game!"
+  />
+  <meta property="og:url" content="https://hmf-memory.netlify.app/" />
+  <meta
+    property="og:site_name"
+    content="Highlands Motoring Festival Memory Game"
+  />
+  <meta
+    property="article:publisher"
+    content="https://www.facebook.com/highlandsmotoringfestival"
+  />
+  <meta
+    property="og:image"
+    content="https://highlandsmotoringfestival.com/wp-content/uploads/highlands-motoring-festival-logo-alternate-1.png"
+  />
+  <meta property="og:image:width" content="794" />
+  <meta property="og:image:height" content="386" />
+</svelte:head>
+
+<svelte:body use:randomizeCards />
 
 <main>
   <h1>Memory ({clicks} {clicks === 1 ? 'try' : 'tries'})</h1>
   <h2>Best Score: {$bestScore === Infinity ? 'No score' : $bestScore}</h2>
   <section>
     {#each shuffledCards as card}
-      <Card {card} {randomize} bind:clicks />
+      <Card {card} {randomizeCards} bind:clicks />
     {/each}
   </section>
 </main>
