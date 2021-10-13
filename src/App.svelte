@@ -17,35 +17,6 @@
   }
 </script>
 
-<svelte:head>
-  <title>Memory Game - Highlands Motoring Festival</title>
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:title"
-    content="Memory Game - Highlands Motoring Festival"
-  />
-  <meta
-    property="og:description"
-    content="Play the Highlands Motoring Festival Memory Game!"
-  />
-  <meta property="og:url" content="https://hmf-memory.netlify.app/" />
-  <meta
-    property="og:site_name"
-    content="Highlands Motoring Festival Memory Game"
-  />
-  <meta
-    property="article:publisher"
-    content="https://www.facebook.com/highlandsmotoringfestival"
-  />
-  <meta
-    property="og:image"
-    content="https://highlandsmotoringfestival.com/wp-content/uploads/highlands-motoring-festival-logo-alternate-1.png"
-  />
-  <meta property="og:image:width" content="794" />
-  <meta property="og:image:height" content="386" />
-</svelte:head>
-
 <svelte:body use:randomizeCards />
 
 <main>
